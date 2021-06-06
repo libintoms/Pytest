@@ -1,0 +1,91 @@
+https://lifesciences.cactusglobal.com/thought-leadership/us-food-and-drug-administrations-social-media-usage-guidelines-are-pharmaceutical-companies-compliant/
+Total links in the page are: 82
+Status of https://lifesciences.cactusglobal.com/ is: 200
+Status of https://lifesciences.cactusglobal.com/jp is: 301
+Status of https://lifesciences.cactusglobal.com/ is: 200
+Status of https://lifesciences.cactusglobal.com/jp is: 301
+Status of https://lifesciences.cactusglobal.com/ is: 200
+Status of https://lifesciences.cactusglobal.com/ is: 200
+Status of https://lifesciences.cactusglobal.com/about-us/ is: 200
+Status of https://lifesciences.cactusglobal.com/services/ is: 200
+Status of https://lifesciences.cactusglobal.com/services/scientific-publications.html is: 200
+Status of https://lifesciences.cactusglobal.com/services/digital-solutions.html is: 200
+Status of https://lifesciences.cactusglobal.com/services/medical-information.html is: 200
+Status of https://lifesciences.cactusglobal.com/services/medical-communications.html is: 200
+Status of https://lifesciences.cactusglobal.com/services/heor.html is: 200
+Status of https://lifesciences.cactusglobal.com/services/medical-device-solutions.html is: 200
+Status of https://lifesciences.cactusglobal.com/news-and-events/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/ is: 200
+Status of https://lifesciences.cactusglobal.com/contact.html is: 200
+Status of https://twitter.com/CactusLifeSci is: 400
+https://twitter.com/CactusLifeSci
+Status of https://www.linkedin.com/showcase/cactus-life-sciences is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/us-food-and-drug-administrations-social-media-usage-guidelines-are-pharmaceutical-companies-compliant/# is: 200
+Status of https://cactusglobal.com/ is: 406
+https://cactusglobal.com/
+Status of https://lifesciences.cactusglobal.com/ is: 200
+Status of https://www.editage.com/ is: 403
+Status of https://unsilo.ai/ is: 200
+Status of https://www.impact.science/ is: 200
+Status of https://researcher.life/ is: 200
+Status of https://cactusglobal.com/brands/cactus-labs/ is: 406
+https://cactusglobal.com/brands/cactus-labs/
+Status of https://lifesciences.cactusglobal.com/thought-leadership/us-food-and-drug-administrations-social-media-usage-guidelines-are-pharmaceutical-companies-compliant/#sidr-main is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/category/resources/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/category/videos/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/category/whitepapers/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/category/posters/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/category/opinion/ is: 200
+Encountered InvalidSchema Exception
+Status of https://lifesciences.cactusglobal.com/thought-leadership/category/posters/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/author/cactus-life-sciences/ is: 200
+Status of https://www.slideshare.net/ClarindaCerejo/us-food-and-drug-administrations-social-media-usage-guidelines-are-pharmaceutical-companies-compliant is: 200
+Encountered InvalidSchema Exception
+Status of https://lifesciences.cactusglobal.com/thought-leadership/tag/fda/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/tag/pharma/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/tag/social-media-strategy/ is: 200
+Encountered InvalidSchema Exception
+Encountered InvalidSchema Exception
+Encountered InvalidSchema Exception
+Status of https://lifesciences.cactusglobal.com/thought-leadership/trends-in-publication-of-review-articles/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/trends-in-publication-of-review-articles/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/awareness-of-international-publication-guidelines-in-asia/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/awareness-of-international-publication-guidelines-in-asia/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/author/cactus-life-sciences/ is: 200
+Status of https://lifesciences.cactusglobal.com/ is: 200
+Status of https://www.linkedin.com/showcase/cactus-life-sciences/ is: 200
+Status of https://twitter.com/CactusLifeSci is: 400
+https://twitter.com/CactusLifeSci
+Status of https://lifesciences.cactusglobal.com/thought-leadership/us-food-and-drug-administrations-social-media-usage-guidelines-are-pharmaceutical-companies-compliant/#respond is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/us-food-and-drug-administrations-social-media-usage-guidelines-are-pharmaceutical-companies-compliant/# is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/tag/eu-mdr/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/tag/journal-publication/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/tag/medical-devices/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/tag/medtech/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/tag/pandemic/ is: 200
+Encountered some other execption
+Encountered InvalidSchema Exception
+Status of https://lifesciences.cactusglobal.com/about-us is: 301
+Status of https://lifesciences.cactusglobal.com/services is: 301
+Status of https://lifesciences.cactusglobal.com/news-and-events is: 301
+Status of https://lifesciences.cactusglobal.com/contact.html is: 200
+Status of https://twitter.com/CactusLifeSci is: 400
+https://twitter.com/CactusLifeSci
+Status of https://www.linkedin.com/showcase/cactus-life-sciences is: 200
+Encountered MissingSchema Exception
+Encountered MissingSchema Exception
+Encountered MissingSchema Exception
+Encountered MissingSchema Exception
+Encountered MissingSchema Exception
+Status of https://lifesciences.cactusglobal.com/file/Cactus_Privacy_Policy.pdf is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/category/resources/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/category/videos/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/category/whitepapers/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/category/posters/ is: 200
+Status of https://lifesciences.cactusglobal.com/thought-leadership/category/opinion/ is: 200
+Encountered InvalidSchema Exception
+<br>Detection of broken links completed with 0 broken links and 3 bad requests and 2 Unaccepted requests and 0 Internal server error and 0 Gateway timouts and 64 valid links
+Test Completed
