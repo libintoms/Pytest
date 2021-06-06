@@ -63,10 +63,6 @@ class Test_main():
                 cookie_value=domain_data[0]
                 print("Cookie value: "+cookie_value)
 
-                # validity=split_cookie_data[3]
-                # validity=validity.split(';')
-                # cookie_expiry=validity[0]
-                # print("Cookie expiry: "+cookie_expiry)
 
             elif "api.cactusglobal.io/v1/initialize" in request.url and request.response.status_code!=200:
                 print("Client track js responded back with an "+request.response.status_code+
