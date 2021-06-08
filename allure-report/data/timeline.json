@@ -1,0 +1,25 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "LIBINT1",
+    "children" : [ {
+      "name" : "19664-MainThread",
+      "children" : [ {
+        "name" : "Verify BigInt script in page",
+        "uid" : "39bfea4a50c0ba59",
+        "parentUid" : "937ca52de358f78ec2dbe9ae5d02918e",
+        "status" : "passed",
+        "time" : {
+          "start" : 1623000385790,
+          "stop" : 1623000405882,
+          "duration" : 20092
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "937ca52de358f78ec2dbe9ae5d02918e"
+    } ],
+    "uid" : "36300d25f31aba241ca0c436185b5ca9"
+  } ]
+}

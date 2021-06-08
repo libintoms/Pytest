@@ -1,0 +1,25 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Test_practice_file",
+    "children" : [ {
+      "name" : "Test_main",
+      "children" : [ {
+        "name" : "Verify BigInt script in page",
+        "uid" : "39bfea4a50c0ba59",
+        "parentUid" : "dd0272c9b66bf661bf65a6b5fab2e7fe",
+        "status" : "passed",
+        "time" : {
+          "start" : 1623000385790,
+          "stop" : 1623000405882,
+          "duration" : 20092
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "dd0272c9b66bf661bf65a6b5fab2e7fe"
+    } ],
+    "uid" : "1904eba05c11c252f47831440dcd1ce5"
+  } ]
+}

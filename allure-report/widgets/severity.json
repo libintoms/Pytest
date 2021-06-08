@@ -1,0 +1,11 @@
+[ {
+  "uid" : "39bfea4a50c0ba59",
+  "name" : "Verify BigInt script in page",
+  "time" : {
+    "start" : 1623000385790,
+    "stop" : 1623000405882,
+    "duration" : 20092
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+} ]

@@ -1,0 +1,85 @@
+{
+  "uid" : "39bfea4a50c0ba59",
+  "name" : "Verify BigInt script in page",
+  "fullName" : "Test_practice_file.Test_main#testcase_01",
+  "historyId" : "e84e6fcac39b85264d3bacf3ce8bf390",
+  "time" : {
+    "start" : 1623000385790,
+    "stop" : 1623000405882,
+    "duration" : 20092
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "test_setup",
+    "time" : {
+      "start" : 1623000380481,
+      "stop" : 1623000385790,
+      "duration" : 5309
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "test_setup::0",
+    "time" : {
+      "start" : 1623000405882,
+      "stop" : 1623000407992,
+      "duration" : 2110
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "blocker"
+  }, {
+    "name" : "suite",
+    "value" : "Test_practice_file"
+  }, {
+    "name" : "subSuite",
+    "value" : "Test_main"
+  }, {
+    "name" : "host",
+    "value" : "LIBINT1"
+  }, {
+    "name" : "thread",
+    "value" : "19664-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "Test_practice_file"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "blocker",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "39bfea4a50c0ba59.json",
+  "parameterValues" : [ ]
+}

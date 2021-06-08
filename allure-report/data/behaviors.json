@@ -1,0 +1,17 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Verify BigInt script in page",
+    "uid" : "39bfea4a50c0ba59",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1623000385790,
+      "stop" : 1623000405882,
+      "duration" : 20092
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  } ]
+}
