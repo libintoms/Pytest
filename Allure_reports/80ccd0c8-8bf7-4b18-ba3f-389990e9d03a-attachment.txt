@@ -1,0 +1,52 @@
+Total urls in the sheet:5
+===============
+Selected webpage: https://test.impact.science/case-studies/
+Server location: USA
+Test server: No
+Page performance is: 74%
+Page speed grade is: C
+First Contentful Paint: 1.7s
+Fully loaded time is:4.4s
+Total page size is: 1.36MB
+The total requests in page: 52
+===============
+Selected webpage: https://test.impact.science/case-studies/journal-of-bone-and-joint-surgery.html
+Server location: USA
+Test server: No
+Page performance is: 61%
+Page speed grade is: D
+First Contentful Paint: 2.1s
+Fully loaded time is:5.0s
+Total page size is: 2.48MB
+The total requests in page: 70
+===============
+Selected webpage: https://test.impact.science/case-studies/demystifying-data-provenance.html
+Server location: USA
+Test server: No
+Page performance is: 72%
+Page speed grade is: C
+First Contentful Paint: 1.8s
+Fully loaded time is:4.3s
+Total page size is: 1.03MB
+The total requests in page: 49
+===============
+Selected webpage: https://test.impact.science/case-studies/taking-cutting-edge-research-to-the-masses.html
+Server location: USA
+Test server: No
+Page performance is: 72%
+Page speed grade is: C
+First Contentful Paint: 1.6s
+Fully loaded time is:4.0s
+Total page size is: 1.63MB
+The total requests in page: 48
+===============
+Selected webpage: https://test.impact.science/case-studies/analysing-risks-in-uk-pension-scheme.html
+Server location: USA
+Test server: No
+Page performance is: 64%
+Page speed grade is: D
+First Contentful Paint: 2.0s
+Fully loaded time is:4.1s
+Total page size is: 0.98MB
+The total requests in page: 49
+Test completed

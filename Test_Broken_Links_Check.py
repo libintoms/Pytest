@@ -14,6 +14,7 @@ class Test_broken_links:
         #intiating browser instance
         chrome_options=Options()
         chrome_options.add_argument('--start-maximized')
+        chrome_options.add_argument('--headless')
         global driver
         driver=webdriver.Chrome(
             executable_path=r"D:/OneDrive - CACTUS/Python/Sel_python/drivers/chromedriver v86/chromedriver.exe", chrome_options=chrome_options
@@ -66,13 +67,14 @@ class Test_broken_links:
         for link in list_links:
             try:
                 request = requests.head(link.get_attribute('href'), data={'key': 'value'})
-                print("Status of " + link.get_attribute('href') + " is: " + str(request.status_code))
+                # print("Status of " + link.get_attribute('href') + " is: " + str(request.status_code))
                 if (request.status_code == 404):
                     brkn_link_count += 1
                     broken_link=link.get_attribute("href")
                     df1=pd.DataFrame({'Dead links':[broken_link]})
                     df1.to_excel(writer, sheet_name='Data_01', header=None, index=None, startcol=2, startrow=row_count_a)
                     writer.save()
+                    print("Dead links in the page (status code: 404) are:")
                     print(link.get_attribute('href'))
                     row_count_a += 1
 
@@ -82,6 +84,7 @@ class Test_broken_links:
                     df2 = pd.DataFrame({'Bad Requests': [bad_request]})
                     df2.to_excel(writer, sheet_name='Data_01', header=None, index=None, startcol=3, startrow=row_count_b)
                     writer.save()
+                    print("Bad requests in the page (status code: 400) are:")
                     print(link.get_attribute('href'))
                     row_count_b += 1
 
@@ -91,6 +94,7 @@ class Test_broken_links:
                     df3 = pd.DataFrame({'Unaccepted Requests': [unaccepted_requests]})
                     df3.to_excel(writer, sheet_name='Data_01', header=None, index=None, startcol=4, startrow=row_count_c)
                     writer.save()
+                    print("Unaccepted requests in the page (status code: 406) are:")
                     print(link.get_attribute('href'))
                     row_count_c += 1
                 # 500 error and 504 error
@@ -101,6 +105,7 @@ class Test_broken_links:
                     df3 = pd.DataFrame({'Internal Server Error': [server_error]})
                     df3.to_excel(writer, sheet_name='Data_01', header=None, index=None, startcol=5, startrow=row_count_d)
                     writer.save()
+                    print("Internal server error in the page (status code: 500) are:")
                     print(link.get_attribute('href'))
                     row_count_d += 1
 
@@ -111,6 +116,7 @@ class Test_broken_links:
                     df3.to_excel(writer, sheet_name='Data_01', header=None, index=None, startcol=6,
                                  startrow=row_count_e)
                     writer.save()
+                    print("Gateway timeout in the page (status code: 504) are:")
                     print(link.get_attribute('href'))
                     row_count_e += 1
 
@@ -118,13 +124,16 @@ class Test_broken_links:
                     valid_link_count += 1
 
             except requests.exceptions.MissingSchema:
-                print("Encountered MissingSchema Exception")
+                pass
+                # print("Encountered MissingSchema Exception")
 
             except requests.exceptions.InvalidSchema:
-                print("Encountered InvalidSchema Exception")
+                pass
+                # print("Encountered InvalidSchema Exception")
 
             except:
-                print("Encountered some other execption")
+                pass
+                # print("Encountered some other execption")
 
         print("Detection of broken links completed with " + str(brkn_link_count) + " broken links and " + str(bad_request_count)
               + " bad requests and " + str(req_unaccepted_count) + " Unaccepted requests and " + str(server_error_count) + " Internal server error and " +
