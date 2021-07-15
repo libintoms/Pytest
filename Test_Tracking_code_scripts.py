@@ -48,13 +48,13 @@ class Test_main():
 
         #Capturing network requests
         for request in self.driver.requests:
-            # if request.response:
-            # print(
-            #     request.url,
-            #     request.response.status_code,
-            #     request.response.headers['Content-Type'],
-            #     request.response.headers['set-cookie']
-            # )
+            if request.response:
+            print(
+                request.url,
+                request.response.status_code,
+                request.response.headers['Content-Type'],
+                request.response.headers['set-cookie']
+            )
             if "api.cactusglobal.io/v1/initialize" in request.url and request.response.status_code==200:
                 bigint_url=request.url
                 print("BigInt request url: "+bigint_url)
