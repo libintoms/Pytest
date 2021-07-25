@@ -15,7 +15,7 @@ class Test_main():
         chrome_options = Options()
         chrome_options.binary_location = \
             r"C:\Users\libin.thomas\AppData\Local\Google\Chrome\Application\chrome.exe"
-        chrome_options.add_argument('--start-maximized')
+        # chrome_options.add_argument('--start-maximized')
         chrome_options.add_argument('--headless')
 
         self.driver = webdriver.Chrome(executable_path=
@@ -67,6 +67,7 @@ class Test_main():
             df2.to_excel(writer, sheet_name='Data_01', index=False, header=None, startrow=row_count, startcol=2)
             writer.save()
 
+            #expiry date
             cert = CertInfo(url, 443)
             expiry_date=cert.expire('%b %d %H:%M:%S %Y %Z')
             print(expiry_date)
