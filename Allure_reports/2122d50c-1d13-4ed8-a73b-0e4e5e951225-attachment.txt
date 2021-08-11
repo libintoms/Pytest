@@ -1,0 +1,7 @@
+Page title: High-Impact Scientific Communication Solutions | Cactus Life Sciences
+{'_ga': 'GA1.1.1325785615.1627230353', '__ivc': '5ca3d14c-6693-4823-aa4c-b645041b10c5', '_ga_MNGCCS5STP': 'GS1.1.1627230352.1.0.1627230352.0', 'consent': 'eyJuZWNlc3NhcnkiOiJ5ZXMiLCJhdmFpbGFibGUiOiJ5ZXMiLCJzb3VyY2UiOiJ1c2VyIiwicGVyZm9ybWFuY2UiOiJ5ZXMiLCJ0YXJnZXRpbmciOiJ5ZXMiLCJmdW5jdGlvbmFsIjoieWVzIn0='}
+{"necessary":"yes","available":"yes","source":"user","performance":"yes","targeting":"yes","functional":"yes"}
+GA cookie accepted with name= _ga
+Bigint cookie accepted with name= __ivc
+Google tag manager script not fired
+Test completed

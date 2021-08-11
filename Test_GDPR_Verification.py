@@ -35,17 +35,20 @@ class Test_main():
 
         self.driver.find_element_by_xpath("//a[contains(text(),'here')]").click()
         self.driver.find_element_by_xpath("//a[contains(text(), 'Allow all')]").click()
+        time.sleep(3)
 
         #Store cookies in dictionary
         all_cookies=self.driver.get_cookies()
         cookies_dict={}
         for cookie in all_cookies:
-            cookies_dict[cookie['name']] = cookie['expiry']
+            cookies_dict[cookie['name']] = cookie['value']
+        # print(cookies_dict)
 
         # fetch consent value
         consent_value = str
         if 'consent' in cookies_dict.keys():
             consent_value = cookies_dict['consent']
+
 
         # convert base64 to string
         acptd_conditions = base64.b64decode(consent_value).decode('utf-8')
@@ -71,7 +74,6 @@ class Test_main():
                 # )
             if "https://www.googletagmanager.com/gtag/" in request.url and request.response.status_code==200:
                 Gtag_url=request.url
-                # print("Gtag js fired with id: "+Gtag_url)
                 id=Gtag_url.split('=')
                 print("Gtag js fired with id: "+id[1])
             else:
@@ -79,7 +81,7 @@ class Test_main():
                 raise AssertionError
 
     @allure.title("Verify functional cookies")
-    def testcase_02(self,test_setup):
+    def testcase_02(self, test_setup):
         self.driver.get("https://lifesciences.cactusglobal.com/")
         title = self.driver.title
         print("Page title: " + title)
