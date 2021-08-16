@@ -16,7 +16,7 @@ class Test_main():
         chrome_options.binary_location=\
             r"C:\Users\libin.thomas\AppData\Local\Google\Chrome\Application\chrome.exe"
         chrome_options.add_argument('--start-maximized')
-        chrome_options.add_argument('--headless')
+        # chrome_options.add_argument('--headless')
 
         self.driver = webdriver.Chrome(executable_path=
                                        r"D:/OneDrive - CACTUS/Python/Sel_python/drivers/chromedriver v86/chromedriver.exe",
@@ -25,7 +25,6 @@ class Test_main():
         # initiating file reader
         file = r'D:\OneDrive - CACTUS\Python\Sel_python\Pytest\Data files\Tracking_codes_Data.xlsx'
         global df, Urls, Gtag_cookie_id, GA_cookie_id, BigInt_cookie_id
-        # Gtag code verfied,GA code verfied	BigInt code verfied
 
         df = pd.read_excel(file, sheet_name='Data_01')
         Urls = df['URL']
@@ -48,88 +47,133 @@ class Test_main():
 
     @allure.title("Verify Gtag script")
     def testcase_01(self, test_setup):
-        # self.driver.get("https://lifesciences.cactusglobal.com/")
-        self.driver.get(Urls[0])
-        title = self.driver.title
-        print("Page title: " + title)
-        time.sleep(3)
+        col_count=0
 
-        self.driver.find_element_by_xpath("//a[contains(text(),'here')]").click()
-        self.driver.find_element_by_xpath("//a[contains(text(), 'Allow all')]").click()
-        time.sleep(5)
+        for webpages in Urls:
+            self.driver.get(Urls[col_count])
+            title = self.driver.title
+            print("Page title: " + title)
+            time.sleep(3)
 
-        Gtag_id='_ga_MNGCCS5STP'
+            self.driver.find_element_by_xpath("//a[contains(text(),'here')]").click()
+            self.driver.find_element_by_xpath("//a[contains(text(), 'Allow all')]").click()
+            time.sleep(5)
 
-        # Store cookies in dictionary
-        all_cookies = self.driver.get_cookies()
-        cookies_dict = {}
-        for cookie in all_cookies:
-            cookies_dict[cookie['name']] = cookie['expiry']
+            Gtag_id=Gtag_cookie_id[col_count]
 
-        if Gtag_id in cookies_dict.keys():
-            print("Gtag cookie present with name= " + str(Gtag_id))
-            cookie_expiry=cookies_dict.get(Gtag_id)
-            expiry_date = time.strftime('%Y-%m-%d %H:%M:%S %Z', time.localtime(cookie_expiry))
-            print("Cookie expiry date: " + str(expiry_date))
-        else:
-            print("Google tag manager script not fired")
-            raise AssertionError
+            # Store cookies in dictionary
+            all_cookies = self.driver.get_cookies()
+            cookies_dict = {}
+            for cookie in all_cookies:
+                cookies_dict[cookie['name']] = cookie['expiry']
+
+            if Gtag_id in cookies_dict.keys():
+                print("Gtag cookie present with name= " + str(Gtag_id))
+                df1=pd.DataFrame({'Gtag code verified':["Yes"]})
+                df1.to_excel(writer, sheet_name='Data_01',index=None, header=None,startcol=4,startrow=col_count+1)
+                writer.save()
+
+                cookie_expiry=cookies_dict.get(Gtag_id)
+                expiry_date = time.strftime('%Y-%m-%d %H:%M:%S %Z', time.localtime(cookie_expiry))
+                print("Cookie expiry date: " + str(expiry_date))
+                df2=pd.DataFrame({'Gtag code expiry':[expiry_date]})
+                df2.to_excel(writer, sheet_name='Data_01', index=None, header=None, startcol=5, startrow=col_count+1)
+                writer.save()
+
+            else:
+                print("Google tag manager script not fired")
+                raise AssertionError
+
+            col_count+=1
 
     @allure.title("Verify GA script")
     def testcase_02(self, test_setup):
-        self.driver.get("https://lifesciences.cactusglobal.com/")
-        title = self.driver.title
-        print("Page title: " + title)
-        time.sleep(3)
+        col_count=0
 
-        self.driver.find_element_by_xpath("//a[contains(text(),'here')]").click()
-        self.driver.find_element_by_xpath("//a[contains(text(), 'Allow all')]").click()
-        time.sleep(5)
+        for webpages in Urls:
+            self.driver.get(Urls[0])
+            title = self.driver.title
+            print("Page title: " + title)
+            time.sleep(3)
 
-        GA_cookie_id = '_ga'
+            self.driver.find_element_by_xpath("//a[contains(text(),'here')]").click()
+            self.driver.find_element_by_xpath("//a[contains(text(), 'Allow all')]").click()
+            time.sleep(5)
 
-        # Store cookies in dictionary
-        all_cookies = self.driver.get_cookies()
-        cookies_dict = {}
-        for cookie in all_cookies:
-            cookies_dict[cookie['name']] = cookie['expiry']
+            GA_cookie = GA_cookie_id[col_count]
 
-        if GA_cookie_id in cookies_dict.keys():
-            print("Bigint cookie present with name= " + GA_cookie_id)
-            cookie_expiry = cookies_dict.get(GA_cookie_id)
-            expiry_date = time.strftime('%Y-%m-%d %H:%M:%S %Z', time.localtime(cookie_expiry))
-            print("Cookie expiry date: " + str(expiry_date))
-        else:
-            print("Google analytics script not fired")
-            raise AssertionError
+            # Store cookies in dictionary
+            all_cookies = self.driver.get_cookies()
+            cookies_dict = {}
+            for cookie in all_cookies:
+                cookies_dict[cookie['name']] = cookie['expiry']
+
+            if GA_cookie in cookies_dict.keys():
+                print("GA cookie present with name= " + GA_cookie)
+                df3 = pd.DataFrame({'GA code verified': ["Yes"]})
+                df3.to_excel(writer, sheet_name='Data_01', index=None, header=None, startcol=6, startrow=col_count + 1)
+                writer.save()
+
+                cookie_expiry = cookies_dict.get(GA_cookie)
+                expiry_date = time.strftime('%Y-%m-%d %H:%M:%S %Z', time.localtime(cookie_expiry))
+                print("Cookie expiry date: " + str(expiry_date))
+                df4 = pd.DataFrame({'GA code expiry': [expiry_date]})
+                df4.to_excel(writer, sheet_name='Data_01', index=None, header=None, startcol=7, startrow=col_count + 1)
+                writer.save()
+
+            else:
+                print("Google analytics script not fired")
+                df5 = pd.DataFrame({'GA code verified': ["Google analytics script not fired"]})
+                df5.to_excel(writer, sheet_name='Data_01', index=None, header=None, startcol=6, startrow=col_count + 1)
+                writer.save()
+
+
+            col_count+=1
 
     @allure.title("Verify BigInt script")
     def testcase_03(self, test_setup):
-        self.driver.get("https://lifesciences.cactusglobal.com/")
-        title = self.driver.title
-        print("Page title: " + title)
-        time.sleep(3)
+        col_count=0
 
-        self.driver.find_element_by_xpath("//a[contains(text(),'here')]").click()
-        self.driver.find_element_by_xpath("//a[contains(text(), 'Allow all')]").click()
-        time.sleep(5)
+        for webpages in Urls:
+            self.driver.get(Urls[0])
+            title = self.driver.title
+            print("Page title: " + title)
+            time.sleep(3)
 
-        BigInt_cookie_id = '__ivc'
+            self.driver.find_element_by_xpath("//a[contains(text(),'here')]").click()
+            self.driver.find_element_by_xpath("//a[contains(text(), 'Allow all')]").click()
+            time.sleep(5)
 
-        # Store cookies in dictionary
-        all_cookies = self.driver.get_cookies()
-        cookies_dict = {}
-        for cookie in all_cookies:
-            cookies_dict[cookie['name']] = cookie['expiry']
+            BigInt_cookie = BigInt_cookie_id[col_count]
 
-        if BigInt_cookie_id in cookies_dict.keys():
-            print("Bigint cookie present with name= " + BigInt_cookie_id)
-            cookie_expiry = cookies_dict.get(BigInt_cookie_id)
-            expiry_date = time.strftime('%Y-%m-%d %H:%M:%S %Z', time.localtime(cookie_expiry))
-            print("Cookie expiry date: " + str(expiry_date))
-        else:
-            print("BigInt script not fired")
-            raise AssertionError
+            # Store cookies in dictionary
+            all_cookies = self.driver.get_cookies()
+            cookies_dict = {}
+            for cookie in all_cookies:
+                cookies_dict[cookie['name']] = cookie['expiry']
+
+            if BigInt_cookie in cookies_dict.keys():
+                print("Bigint cookie present with name= " + BigInt_cookie)
+                df6 = pd.DataFrame({'BigInt code verified': ["Yes"]})
+                df6.to_excel(writer, sheet_name='Data_01', index=None, header=None, startcol=8, startrow=col_count + 1)
+                writer.save()
+
+                cookie_expiry = cookies_dict.get(BigInt_cookie)
+                expiry_date = time.strftime('%Y-%m-%d %H:%M:%S %Z', time.localtime(cookie_expiry))
+                print("Cookie expiry date: " + str(expiry_date))
+                df7 = pd.DataFrame({'BigInt code expiry': [cookie_expiry]})
+                df7.to_excel(writer, sheet_name='Data_01', index=None, header=None, startcol=9, startrow=col_count + 1)
+                writer.save()
+
+            else:
+                print("BigInt script not fired")
+                df8 = pd.DataFrame({'BigInt code verified': ["BigInt script not fired"]})
+                df8.to_excel(writer, sheet_name='Data_01', index=None, header=None, startcol=8, startrow=col_count + 1)
+                writer.save()
+                # raise AssertionError
+
+            col_count += 1
+
 
 
 
