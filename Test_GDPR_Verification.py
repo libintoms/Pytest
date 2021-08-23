@@ -54,31 +54,30 @@ class Test_main():
         acptd_conditions = base64.b64decode(consent_value).decode('utf-8')
         print(acptd_conditions)
 
+        #verifying tracking code presence
         GA_code='_ga'
-        Bigint_code='__ivc'
-        if GA_code in cookies_dict.keys() and Bigint_code in cookies_dict.keys():
+        if GA_code in cookies_dict.keys():
             print("GA cookie accepted with name= " + GA_code)
-            print("Bigint cookie accepted with name= "+Bigint_code)
+
         else:
             print("Unable to fetch cookie details")
             raise AssertionError
 
+        Bigint_code = '__ivc'
+        if Bigint_code in cookies_dict.keys():
+            print("Bigint cookie present with name= " + Bigint_code)
 
-        for request in self.driver.requests:
-            # if request.response:
-                # print(
-                #     request.url,
-                #     request.response.status_code,
-                #     request.response.headers['Content-Type'],
-                #     request.response.headers['set-cookie']
-                # )
-            if "https://www.googletagmanager.com/gtag/" in request.url and request.response.status_code==200:
-                Gtag_url=request.url
-                id=Gtag_url.split('=')
-                print("Gtag js fired with id: "+id[1])
-            else:
-                print("Google tag manager script not fired")
-                raise AssertionError
+        else:
+            print("BigInt script not fired")
+
+        Gtag_code='_ga_MNGCCS5STP'
+        if Gtag_code in cookies_dict.keys():
+            print("Gtag cookie present with name= " + Gtag_code)
+
+        else:
+            print("Gtag script not fired")
+
+
 
     @allure.title("Verify functional cookies")
     def testcase_02(self, test_setup):
@@ -106,6 +105,29 @@ class Test_main():
         #convert base64 to string
         acptd_conditions=base64.b64decode(consent_value).decode('utf-8')
         print(acptd_conditions)
+
+        # verifying tracking code presence
+        GA_code = '_ga'
+        if GA_code in cookies_dict.keys():
+            print("GA cookie accepted with name= " + GA_code)
+
+        else:
+            print("GA script not fired")
+            # raise AssertionError
+
+        Bigint_code = '__ivc'
+        if Bigint_code in cookies_dict.keys():
+            print("Bigint cookie present with name= " + Bigint_code)
+
+        else:
+            print("BigInt script not fired")
+
+        Gtag_code = '_ga_MNGCCS5STP'
+        if Gtag_code in cookies_dict.keys():
+            print("Gtag cookie present with name= " + Gtag_code)
+
+        else:
+            print("Gtag script not fired")
 
 
     @allure.title("Verify functional & performance cookies")
@@ -135,4 +157,27 @@ class Test_main():
         # convert base64 to string
         acptd_conditions = base64.b64decode(consent_value).decode('utf-8')
         print(acptd_conditions)
+
+        # verifying tracking code presence
+        GA_code = '_ga'
+        if GA_code in cookies_dict.keys():
+            print("GA cookie accepted with name= " + GA_code)
+
+        else:
+            print("GA script not fired")
+            # raise AssertionError
+
+        Bigint_code = '__ivc'
+        if Bigint_code in cookies_dict.keys():
+            print("Bigint cookie present with name= " + Bigint_code)
+
+        else:
+            print("BigInt script not fired")
+
+        Gtag_code = '_ga_MNGCCS5STP'
+        if Gtag_code in cookies_dict.keys():
+            print("Gtag cookie present with name= " + Gtag_code)
+
+        else:
+            print("Gtag script not fired")
 
